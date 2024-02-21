@@ -62,7 +62,6 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
-        android:id="@+id/categorylabel"
         android:layout_width="121dp"
         android:layout_height="23dp"
         android:text="category name"

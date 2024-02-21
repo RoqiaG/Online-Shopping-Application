@@ -75,7 +75,6 @@
         app:layout_constraintVertical_bias="0.486" />
 
     <TextView
-        android:id="@+id/categorytextView"
         android:layout_width="211dp"
         android:layout_height="28dp"
         android:text="Category "

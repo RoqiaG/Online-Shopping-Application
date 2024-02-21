@@ -8,7 +8,6 @@
     android:background="@drawable/blurred">
 
     <TextView
-        android:id="@+id/sulabel"
         android:layout_width="164dp"
         android:layout_height="76dp"
         android:text="Sign Up"
