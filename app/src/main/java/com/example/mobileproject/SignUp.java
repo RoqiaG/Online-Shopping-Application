@@ -2,7 +2,6 @@ package com.example.mobileproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -13,7 +12,6 @@ import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
 
-    SharedPreferences sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

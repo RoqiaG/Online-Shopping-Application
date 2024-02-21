@@ -23,7 +23,7 @@ public class forgetPassword extends AppCompatActivity {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              String email = emailEdittxt.getText().toString();
+                String email = emailEdittxt.getText().toString();
                 if (db.checkEmail(email)){
                     check = true;
                     Intent intent = new Intent(getApplicationContext(),Resetpassword.class);

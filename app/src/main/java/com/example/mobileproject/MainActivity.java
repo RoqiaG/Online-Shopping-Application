@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
     SharedPreferences sp;
     SharedPreferences.Editor editor ;
     TextView forget_pass;
@@ -30,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         UsersHelper user = new UsersHelper(this);
 
 
-
         sp=getSharedPreferences("Data",MODE_PRIVATE);
         editor=sp.edit();
         boolean login =sp.getBoolean("islogged",false);
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         forget_pass=findViewById(R.id.forgetpasswordTxtview);
 
-       // UsersHelper user = new UsersHelper(this);
+        // UsersHelper user = new UsersHelper(this);
         forget_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,5 +110,6 @@ public class MainActivity extends AppCompatActivity {
         UsersHelper usersHelper = new UsersHelper(this);
         return usersHelper.checkAdmin(email, password);
     }
+
 
 }

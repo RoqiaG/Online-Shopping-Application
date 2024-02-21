@@ -12,7 +12,7 @@ import java.util.List;
 public class UsersHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "Mobile.db";
-    private static final int DATABASE_VERSION =11;
+    private static final int DATABASE_VERSION =14;
    // SQLiteDatabase db = this.getWritableDatabase() ;
     public UsersHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -53,10 +53,21 @@ public class UsersHelper extends SQLiteOpenHelper {
 
         String createFeedbackTable = "CREATE TABLE Feedback " +
                 "(Productid INTEGER PRIMARY KEY , " +
-                "ProductName TEXT not null ," +
+                "ProductName TEXT ," +
                 "Feedback TEXT not null ," +
                 "rate INTEGER not null)";
         db.execSQL(createFeedbackTable);
+
+        String createTableTransactions = "CREATE TABLE Transactions ("
+                + "transaction_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + "user_id INTEGER not null, "
+                + "product_name TEXT not null, "
+                + "quantity INTEGER not null, "
+                + "price REAL not null, "
+                + "timestamp DATETIME DEFAULT CURRENT_TIMESTAMP);";
+        db.execSQL(createTableTransactions);
+
+
 
     }
 
@@ -206,4 +217,6 @@ public class UsersHelper extends SQLiteOpenHelper {
         cursor.close();
         return categoriesList;
     }
+
+
 }
